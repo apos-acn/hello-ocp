@@ -6,6 +6,7 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY /app/package.json /usr/src/app/ 
+RUN npm cache clean --force
 RUN npm install
 
 # Bundle app source
