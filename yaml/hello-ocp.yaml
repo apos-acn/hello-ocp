@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-ocp
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: hello-ocp
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-ocp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-ocp
+  template:
+    metadata:
+      labels:
+        app: hello-ocp
+    spec:
+      containers:
+      - name: hello-ocp
+        image: paulbouwer/hello-kubernetes:1.8
+        ports:
+        - containerPort: 8080
