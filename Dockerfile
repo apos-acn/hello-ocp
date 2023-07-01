@@ -6,8 +6,8 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY /app/package.json /usr/src/app/ 
-RUN npm cache clean --force
 RUN npm install
+RUN sudo chown -R 1000670000:0 "/.npm"
 
 # Bundle app source
 COPY /app /usr/src/app 
