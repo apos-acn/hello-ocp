@@ -39,7 +39,7 @@ app.get('/kill', function (req, res) {
 
 // Set up listener
 app.listen(port, function () {
-    console.log("hello-kubernetes version %s", packageJson.version);
+    console.log("hello-ocp version %s", packageJson.version);
     console.log("Running on %s (%s)", os.type(), os.release());
     console.log("Listening on: http://%s:%s", os.hostname(), port);
 });
