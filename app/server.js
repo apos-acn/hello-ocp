@@ -12,7 +12,7 @@ app.use(morgan('combined'));
 
 // Configuration
 var port = process.env.PORT || 8080;
-var message = process.env.MESSAGE || "Just deployed on OpenShift!";
+var message = process.env.MESSAGE || "Hello world!";
 
 app.get('/', function (req, res) {
     res.render('home', createResponseObject());
