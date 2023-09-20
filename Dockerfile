@@ -1,4 +1,4 @@
-FROM node:bookworm
+FROM node:8-alpine
 
 # Create app directory
 RUN mkdir -p /usr/src/app
