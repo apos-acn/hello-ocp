@@ -1,4 +1,4 @@
-FROM node:bookworm-slim
+FROM node:lts-bookworm-slim
 
 # Create app directory
 RUN mkdir -p /usr/src/app
